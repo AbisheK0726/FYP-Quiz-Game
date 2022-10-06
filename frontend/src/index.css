@@ -1,0 +1,103 @@
+@font-face {
+	font-family: Helvetica;
+	src: url(./fonts/HelveticaWorld-Regular.ttf);
+}
+
+@font-face {
+	font-family: Helvetica;
+	src: url(./fonts/HelveticaWorld-Bold.ttf);
+	font-weight: bold;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+button {
+	border: 0;
+	cursor: pointer;
+	background: none;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+p {
+	line-height: 1.7;
+}
+
+.container {
+	width: 100%;
+	padding: 0 10vw;
+}
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+input,
+button[type='submit'],
+select {
+	border-radius: 1rem;
+	border: none;
+	font-size: 1.5rem;
+	padding: 1.2rem;
+	margin-bottom: 1rem;
+}
+
+input,
+select {
+	width: 100%;
+	background-color: #f3f6fb;
+}
+
+button[type='submit'] {
+	color: white;
+	background: #071953;
+}
+
+.loadingSpinnerContainer {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 5000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loadingSpinner {
+	width: 64px;
+	height: 64px;
+	border: 8px solid;
+	border-color: #000 transparent #555 transparent;
+	border-radius: 50%;
+	animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.inline {
+	display: flex;
+}
